@@ -3,6 +3,7 @@ import { CreateBlogInput } from "@anyam/medium-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 import { useNavigate } from "react-router-dom";
+import Appbar from "../components/Appbar";
 const Publish = () => {
   const navigate = useNavigate();
   const [blogInputs, setBlogInputs] = useState<CreateBlogInput>({
@@ -31,6 +32,7 @@ const Publish = () => {
   };
   return (
     <div>
+      <Appbar />
       <div className="max-w-screen-lg flex justify-center m-auto mt-4">
         <div className="w-full ">
           {" "}

@@ -40,10 +40,7 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
             {type == "signup"
               ? "  Already have an account "
               : "Don't have an account "}
-            <Link
-              to={type == "signup" ? "/signin" : "/signup"}
-              className="underline"
-            >
+            <Link to={type == "signup" ? "/signin" : "/"} className="underline">
               {type == "signup" ? "Login" : "signup"}
             </Link>{" "}
             ?

@@ -1,3 +1,4 @@
+import Appbar from "../components/Appbar";
 import FullBlog from "../components/FullBlog";
 import Spinner from "../components/Spinner";
 import { useBlog1 } from "../hooks/useBlog";
@@ -20,6 +21,7 @@ const Blog = () => {
 
   return (
     <div>
+      <Appbar />
       <FullBlog
         title={blog?.title}
         name={blog?.author?.name}
