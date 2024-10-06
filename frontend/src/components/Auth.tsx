@@ -17,14 +17,12 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
     try {
       const response = await axios.post(
         `${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`,
-        {
-          postInputs,
-        }
+        postInputs
       );
 
       console.log(response.data);
       const jwt = response.data;
-      localStorage.setItem("token", jwt);
+      localStorage.setItem("token", `Bearer ${jwt}`);
       navigate("/blogs");
     } catch (e) {
       console.log(e);
@@ -86,7 +84,10 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
               });
             }}
           />
-          <button className="w-full bg-black text-white mt-4 p-2 rounded-md">
+          <button
+            onClick={sendRequest}
+            className="w-full bg-black text-white mt-4 p-2 rounded-md"
+          >
             {type == "signup" ? "Signup" : "Signin"}
           </button>
         </div>
