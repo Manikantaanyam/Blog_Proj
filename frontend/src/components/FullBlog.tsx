@@ -1,4 +1,3 @@
-import Appbar from "./Appbar";
 import { Avatar } from "./BlogCard";
 
 const FullBlog = ({
@@ -6,9 +5,9 @@ const FullBlog = ({
   content,
   name,
 }: {
-  title: string;
-  content: string;
-  name: string;
+  title: string | undefined;
+  content: string | undefined;
+  name: string | undefined;
 }) => {
   return (
     <div>

@@ -1,4 +1,3 @@
-import Appbar from "../components/Appbar";
 import BlogCard from "../components/BlogCard";
 import BlogSkeleton from "../components/BlogSkeleton";
 import { useBlog } from "../hooks/useBlog";

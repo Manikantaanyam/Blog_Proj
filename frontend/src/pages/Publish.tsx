@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from "react";
-import Appbar from "../components/Appbar";
 import { CreateBlogInput } from "@anyam/medium-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
@@ -32,7 +31,6 @@ const Publish = () => {
   };
   return (
     <div>
-     
       <div className="max-w-screen-lg flex justify-center m-auto mt-4">
         <div className="w-full ">
           {" "}

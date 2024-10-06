@@ -1,5 +1,5 @@
-import BlogSkeleton from "../components/BlogSkeleton";
 import FullBlog from "../components/FullBlog";
+import Spinner from "../components/Spinner";
 import { useBlog1 } from "../hooks/useBlog";
 import { useParams } from "react-router-dom";
 
@@ -10,10 +10,10 @@ const Blog = () => {
   });
   if (loading) {
     return (
-      <div>
-        <BlogSkeleton />
-        <BlogSkeleton />
-        <BlogSkeleton />
+      <div className="h-screen flex flex-col justify-center items-center">
+        <div className="flex  justify-center">
+          <Spinner />
+        </div>
       </div>
     );
   }
@@ -21,9 +21,9 @@ const Blog = () => {
   return (
     <div>
       <FullBlog
-        title={blog.title}
-        name={blog.author.name}
-        content={blog.content}
+        title={blog?.title}
+        name={blog?.author?.name}
+        content={blog?.content}
       />
     </div>
   );
